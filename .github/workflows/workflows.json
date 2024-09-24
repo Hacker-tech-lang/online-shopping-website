@@ -1,0 +1,78 @@
+{
+    "workflows": [
+        {
+            "name": "User Registration Test",
+            "description": "Tests the user registration functionality.",
+            "steps": [
+                {
+                    "action": "navigate",
+                    "url": "/register"
+                },
+                {
+                    "action": "fillForm",
+                    "data": {
+                        "username": "testUser",
+                        "password": "testPassword",
+                        "email": "test@example.com"
+                    }
+                },
+                {
+                    "action": "submitForm",
+                    "expectedResult": {
+                        "status": "success",
+                        "message": "Account created successfully."
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Product Search Test",
+            "description": "Tests the product search functionality.",
+            "steps": [
+                {
+                    "action": "navigate",
+                    "url": "/"
+                },
+                {
+                    "action": "search",
+                    "query": "Product 1"
+                },
+                {
+                    "action": "verifyResults",
+                    "expectedResults": [
+                        {
+                            "id": 1,
+                            "name": "Product 1",
+                            "price": "$10.00"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User Dashboard Test",
+            "description": "Tests user dashboard loading.",
+            "steps": [
+                {
+                    "action": "login",
+                    "credentials": {
+                        "username": "user1",
+                        "password": "password123"
+                    }
+                },
+                {
+                    "action": "navigate",
+                    "url": "/dashboard"
+                },
+                {
+                    "action": "verifyContent",
+                    "expectedContent": [
+                        "Order History",
+                        "Account Settings"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
