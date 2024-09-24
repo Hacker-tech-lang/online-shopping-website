@@ -1,0 +1,9 @@
+{
+    "name": "Online Shopping Website",
+    "short_name": "Shopping",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#333333",
+    "description": "A simple online shopping website."
+}
