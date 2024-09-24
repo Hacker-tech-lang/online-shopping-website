@@ -1,0 +1,22 @@
+{
+    "dashboard": {
+        "user1": {
+            "orders": [
+                {
+                    "productId": 1,
+                    "quantity": 2,
+                    "status": "shipped"
+                }
+            ]
+        },
+        "user2": {
+            "orders": [
+                {
+                    "productId": 2,
+                    "quantity": 1,
+                    "status": "processing"
+                }
+            ]
+        }
+    }
+}
